@@ -1,0 +1,402 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+main .landingPageContent{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/background/BgOver1.jpg");
+    background-position: bottom;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+main .landingPageContent .left, .right{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 7vw;
+}
+
+main .landingPageContent .left h1{
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+main .landingPageContent .left p{
+    font-size: 1rem;
+    margin: 20px 0px;
+}
+
+main .landingPageContent .left .search{
+    position: relative;
+    z-index: auto;
+}
+
+main .landingPageContent .left button{
+    background-color: black;
+    height: 32px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    gap: 10px;
+    border-style: none;
+    outline: none;
+    overflow-y: hidden;
+}
+
+main .landingPageContent .left button img{
+    width: 24px;
+}
+
+main .landingPageContent .left .search{
+    display: flex;
+    align-items: center;
+}
+
+main .landingPageContent .left .search form{
+    display: none;
+    gap: 10px;
+}
+
+main .landingPageContent .left .search form input{
+    width:200px;
+    border-radius: 10px;
+    outline: none;
+    border-width: 2px;
+    border-color: #ebecf0;
+    border-style: solid;
+    padding: 5px;
+}
+
+.logo{
+    position: absolute;
+    z-index: 5;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0px 7vw;
+    top: 8vh;
+}
+
+.logo .logpart{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.logo .logpart p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main .searchResult{
+    min-height: 100vh;
+    padding: 6vh 7vw;
+    background-image: url("../img/background/result back1.jpg");
+    background-position: top;
+    background-size: cover;
+    color: white;
+}
+
+main .searchResult h1{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.reSearch a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.result{
+    padding: 20px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+main .coming{
+    width: 35vw;
+    padding: 0px 10px;
+}
+
+main .current h2{
+    color: black;
+}
+
+main .current h1,h2,h3{
+    font-weight: 400;
+}
+
+main .current h4{
+    font-weight:600;
+}
+
+
+main .current .location, .currentTemp, .weatherDetail{
+    margin: 10px 0px;
+    padding: 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d9d9d9;
+    width: 100%;
+    backdrop-filter: blur(11.2px);
+    -webkit-backdrop-filter: blur(11.2px);
+}
+
+main .current .location .iconName{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+main .current .location .iconName h3{
+    font-size: 2.5rem;
+}
+
+main .current .location .iconName .icon{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main .current .location .iconName .icon img{
+    transform: scale(1.5);
+}
+
+main .current .location .iconName .place .locationDetails{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+main .current .location .iconName .place .desc{
+    font-size: 0.7rem;
+}
+
+.currentTemp .temp{
+    display: flex;
+    align-items:flex-start;
+    gap: 50px;
+}
+
+.currentTemp .temp span{
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.currentTemp .temp .symbol span{
+    font-size: 3rem;
+}
+
+.weatherDetail .moreDetail{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weatherDetail h4{
+    margin-bottom: 15px;
+}
+
+.weatherDetail .moreDetail .card{
+    background-color: #f2f2f1;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.weatherDetail .moreDetail .coloCard{
+    background-color: #ec6e4c;
+    color: white;
+}
+.weatherDetail .moreDetail .coloCard img{
+    filter: invert(100%);
+}
+
+.weatherDetail .moreDetail .card .unit{
+    text-align: center;
+    padding:5px 0px;
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.weatherDetail .moreDetail .card .unit span{
+    font-size: 0.7rem;
+}
+
+.weatherDetail .moreDetail .card .property{
+    text-align: center;
+}
+
+.weatherDetail .moreDetail .card .property p{
+    font-size: 0.7rem;
+}
+
+.coming{
+    color: black;
+}
+
+.coming .intro{
+    margin: 10px 0px;
+}
+
+.coming h3{
+    margin: 10px 0px;
+}
+
+.comingDays{
+    margin: 30px 0px;
+}
+
+.fiveDays{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.fiveDays .day{
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d9d9d9;
+}
+
+.fiveDays .tomm{
+    border-color: #ec6e4c;
+    border-width: 3px;
+}
+
+.fiveDays .day .date{
+    font-size: 0.7rem;
+}
+
+.fiveDays .day .temp{
+    font-size: 1.5rem;
+}
+
+.fiveDays .day .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ec6e4c;
+}
+
+.compareComingDays{
+    margin: 20px 0px;
+}
+
+.compareComingDays .daytime{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.compareComingDays .daytime .sunrise, .sunset{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    background-color: #f2f2f1;
+    border-radius: 10px;
+}
+
+.developer p{
+    font-size: 0.5rem;
+}
+
+
+.num{
+    width: 100px;
+}
+
+.personalInfo{
+    position: absolute;
+    width: 50vw;
+    left: 0;
+    padding: 0px 7vw;
+    margin-top: -100px;
+}
+
+.personalInfo p{
+    font-size: 0.5rem;
+}
+
+/* set for before animation */
+.logpart,.hero,.coolLogo,.currentCard,.comingText,.day, .dayTimeCard, .developer,.personalInfo,.lcn{
+    opacity: 0;
+}
+
+.nothingReturn{
+    width: 44vw;
+    height: 70vh;
+    background-color: white;
+    position: absolute;
+    right: 0%;
+    color: black;
+    z-index: 5;
+    display: none;
+}
+.nothingReturn .errorImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+.nothingReturn .errorImage img{
+    width: 100%;
+    padding: 50px;
+}
+
+.nothingReturn .message{
+    text-align: center;
+    padding: 0px 100px;
+
+}
+
+.nothingReturn .message p{
+    padding: 0px 50px;
+}
+
+.nothingReturn .message h2{
+    font-size: 4rem;
+    font-weight: 400;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/moment.min.js"></script>
+    <script src="config/access/access_key.js"></script>
+    <script src="config/components/variable.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/logo/weather.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="logo">
+        <div class="logpart">
+            <img src="img/logo/weather.png" alt="" srcset="">
+            <p>weather</p>
+        </div>
+    </div>
+    <main>
+        <div class="landingPageContent" id="weather">
+            <div class="left">
+                    <div class="hero">
+                        <h1>Weather For Any Location</h1>
+                        <p>Welcome to Weather, your go-to source for up-to-date weather information. Get the latest forecasts, alerts, and news for your area and around the world. Stay informed with our real-time updates and personalized alerts. Accessible from any device, Weather keeps you ahead of the weather, so you're always prepared for whatever Mother Nature brings.</p>
+                    <div class="search">
+                        <button class="clickToAction" id="clickToAction"><img src="img/icons/icons8_search_24px_1.png" alt=""><span class="txt" id="txt">Search Location</span></button>
+                        <form action="index.html?#SearchResult" method="get" id="form">
+                            <input type="text" placeholder="Search Location..." id="search" name="search" required>
+                            <button id="search_submit" ><img src="img/icons/icons8_search_24px_1.png" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="img/logo/Wed1.png" alt="" srcset="" class="coolLogo">
+            </div>
+        </div>
+        <div class="personalInfo">
+            <p>The data displayed on this website is obtained from the OpenWeather API. All weather information and related content displayed on this site is subject to OpenWeather's terms and conditions, which can be found at their website. By accessing and using this site, you agree to comply with OpenWeather's terms and conditions as well as any applicable laws and regulations. This site does not make any warranties or representations regarding the accuracy or reliability of the information provided by the OpenWeather API.</p>
+        </div>
+        <div class="searchResult" id="SearchResult">
+            <div class="reSearch">
+                <a href="#weather" id="back_top"> <img src="img/icons/icons8_scroll_up_24px.png" alt=""> Return</a>
+            </div>
+            <h1 class="resultFor">Results For: <span id="searched_city">"Mbabane"</span></h1>
+            <div class="result">
+                <div class="current">
+                    <h2 class="lcn">Current Weather</h2>
+                    <div class="location currentCard">
+                        <h4>Location</h4>
+                        <div class="iconName">
+                            <div class="icon">
+                                <img src="" alt="" srcset="" id="currIcon">
+                            </div>
+                            <div class="place">
+                                <p class="locationDetails"><img src="img/icons/icons8_location_24px.png" alt="" srcset=""><span id="city"></span>, <span id="country"></span></p>
+                                <h3 id="main_desc"></h3>
+                                <p class="desc" id="desc"></p>
+                            </div>
+                            <!-- <p>Mbabane, SZ</p> -->
+                        </div>
+                    </div>
+                    <div class="currentTemp currentCard">
+                        <h4>Temperature</h4>
+                        <div class="temp">
+                            <div class="num">
+                                <span class="tempDigit" id="tempDegit"></span>
+                            </div>
+                            <div class="symbol">
+                                <span>℃</span>
+                            </div>
+                        </div>
+                        <!-- <p>Feeling like 22.25℃, Moderate Rain</p> -->
+                    </div>
+                    <div class="weatherDetail currentCard">
+                        <h4>More Details</h4>
+                        <div class="moreDetail">
+                            <div class="card coloCard">
+                                <div class="ico"><img src="img/icons/icons8_wet_24px_2.png" alt="" srcset=""></div>
+                                <div class="unit"><h3 id="hum_Unit"></h3><span>%</span></div>
+                                <div class="property"><p>Humidity</p></div>
+                            </div>
+    
+                            <div class="card">
+                                <div class="ico"><img src="img/icons/icons8_atmospheric_pressure_24px_2.png" alt="" srcset=""></div>
+                                <div class="unit"><h3 id="pre_Unit"></h3><span>hPa</span></div>
+                                <div class="property"><p>Pressure</p></div>
+                            </div>
+    
+                            <div class="card">
+                                <div class="ico"><img src="img/icons/icons8_cloud_24px_1.png" alt="" srcset=""></div>
+                                <div class="unit"><h3 id="clo_Unit"></h3><span>%</span></div>
+                                <div class="property"><p>Clouds</p></div>
+                            </div>
+    
+                            <div class="card">
+                                <div class="ico"><img src="img/icons/icons8_wind_24px_1.png" alt="" srcset=""></div>
+                                <div class="unit"><h3 id="win_Unit"></h3><span>m/s</span></div>
+                                <div class="property"><p>Wind Speed</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coming">
+                    <h2 class="comingText">More Weather</h2>
+                    <p class="intro comingText">Stay ahead of the game with up-to-date weather information, including temperature, wind speed, and precipitation</p>
+                    
+                    <div class="comingDays">
+                        <h3 class="comingText">Coming Days</h3>
+                        <div class="fiveDays">
+                            <div class="day tomm">
+                                <div class="dayCount"><p id="dayOne"></p></div>
+                                <div class="date"><p id="tomorrowDate"></p></div>
+                                <div class="icon"><img src="img/02d@2x.png" alt="" id="tomorrowIcon"></div>
+                                <div class="temp"><span id="tomorrowTemp"></span> <span>℃</span></div>
+                            </div>
+                            <div class="day">
+                                <div class="dayCount"><p id="dayTwo"></p></div>
+                                <div class="date"><p id="dayThreeDate"></p></div>
+                                <div class="icon"><img src="img/02d@2x.png" alt="" id="dayThreeIcon"></div>
+                                <div class="temp"><span id="dayThreeTemp"></span> <span>℃</span></div>
+                            </div>
+                            <div class="day">
+                                <div class="dayCount"><p id="dayThree"></p></div>
+                                <div class="date"><p id="dayFourDate"></p></div>
+                                <div class="icon"><img src="img/02d@2x.png" alt="" id="dayFourIcon"></div>
+                                <div class="temp"><span id="dayFourTemp"></span> <span>℃</span></div>
+                            </div>
+                            <div class="day">
+                                <div class="dayCount"><p id="dayFour"></p></div>
+                                <div class="date"><p id="dayFiveDate"></p></div>
+                                <div class="icon"><img src="img/02d@2x.png" alt="" id="dayFiveIcon"></div>
+                                <div class="temp"><span id="dayFiveTemp"></span> <span>℃</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compareComingDays">
+                       <h3 class="comingText">Daytime</h3>
+                       <div class="daytime">
+                            <div class="sunrise dayTimeCard">
+                                <div class="dayicon"><img src="img/icons/icons8_sun_48px_2.png" alt="" srcset=""></div>
+                                <div class="time">
+                                    <h4>Sunrise</h4>
+                                    <p id="sunriseTime"></p>
+                                </div>
+                            </div>
+                        <div class="sunset dayTimeCard">
+                                <div class="dayicon"><img src="img/icons/icons8_moon_and_stars_48px_1.png" alt="" srcset=""></div>
+                                <div class="time">
+                                    <h4>Sunset</h4>
+                                    <p id="sunsetTime"></p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="developer">
+                        <p>Thank you for using our weather app, As our first attempt, we're constantly looking to improve our app and welcome any feedback you may have.Thank you for choosing us as your go-to source for weather information.</p>
+                    </div>
+                </div>
+                <div class="nothingReturn">
+                    <div class="errorImage">
+                        <img src="./img/background/Oops@3x.png" alt="">
+                    </div>
+                    <div class="message">
+                        <h2>Oops</h2>
+                        <p>Sorry, we  couldn't find your searched location
+                        please trying a city near you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/searchAnimation.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/dates.js"></script>
+    <script src="config/components/location_api.js"></script>
+    <script src="config/components/current_api.js"></script>
+    <script src="config/components/five_days.js"></script>
+    <script src="config/search.js"></script>
+    <script src="js/linkDelay.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main .logoback{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+main .logo{
+    position: fixed;
+    /* before animation */
+    opacity:0;
+}
+
+main .logo h1{
+    font-size: 4rem;
+    margin: 0px;
+}
+
+main .logo .line{
+    width: 25px;
+    height: 7px;
+    background-color: white;
+    text-align: right;
+    float: right;
+    margin-top: -10px;
+    margin-right: 2px;
+}
+
+
+.appname{
+    color: black;
+    opacity: 0;
+}
+.appname h2{
+    font-size: 3rem;
+}
